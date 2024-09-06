@@ -17,4 +17,5 @@ public class CustomerService implements ICustomerService {
     public List<Customer> getAll() {
         return (List<Customer>) repository.findAll();
     }
+
 }
