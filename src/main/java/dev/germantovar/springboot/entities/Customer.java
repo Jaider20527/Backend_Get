@@ -4,9 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import javax.persistence.*;
+import java.sql.Date;
+import java.util.List;
 
 @Entity
-@Table(name= "tienda")
+@Table(name= "crearcasos")
 @Setter
 @Getter
 @ToString
@@ -16,18 +18,13 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-    private String nombre;
-    private String descripcion;
-    private String tipo;
-    private String serial;
-    private String fecha;
-    private String peso;
-    private String alto;
-    private String ancho;
-    private String largo;
-    private String precio;
-    private String imagen;
-
-
+    private String cliente;
+    private String tipocaso;
+    private Date fechainicio;
+    private Date fechacierre;
+    private String prioridad;
+    private String estado;
+    private String descripcioncaso;
+    private String abogadoasignado;
 
 }

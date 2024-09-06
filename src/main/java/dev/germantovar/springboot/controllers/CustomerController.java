@@ -19,6 +19,6 @@ public class CustomerController {
       @Autowired
       private CustomerRepository customerRepository;
 
-      @GetMapping("lista")
+      @GetMapping("CreacionCasos")
       public List<Customer> getAll(){ return service.getAll();}
 }
