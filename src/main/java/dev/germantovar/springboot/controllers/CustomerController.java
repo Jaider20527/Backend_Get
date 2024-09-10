@@ -10,15 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@RestController //Se utiliza para definir una clase como un controlador que maneja solicitudes
+// HTTP y devuelve datos en formato JSON o XML
 
 public class CustomerController {
-      @Autowired
+      @Autowired // se utiliza para la inyección de dependencias de manera automática
       private ICustomerService service;
 
       @Autowired
       private CustomerRepository customerRepository;
 
-      @GetMapping("lista")
+      @GetMapping("lista")  // se utiliza para manejar solicitudes HTTP GET en los controladores de una aplicación
       public List<Customer> getAll(){ return service.getAll();}
 }
