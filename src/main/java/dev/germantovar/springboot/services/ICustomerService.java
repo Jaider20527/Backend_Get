@@ -7,4 +7,7 @@ import java.util.List;
 public interface ICustomerService {
     List<Customer>getAll();
 
+    // metodo POST
+    void save(Customer customer );
+
 }

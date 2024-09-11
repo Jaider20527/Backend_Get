@@ -6,6 +6,8 @@ import dev.germantovar.springboot.repository.CustomerRepository;
 import dev.germantovar.springboot.services.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -19,6 +21,12 @@ public class CustomerController {
       @Autowired
       private CustomerRepository customerRepository;
 
-      @GetMapping("CreacionCasos")
+      @GetMapping("Casos")
       public List<Customer> getAll(){ return service.getAll();}
+
+      // metodo POST
+      @PostMapping({"EnvioCasos"})
+      public void save(@RequestBody Customer customer) {
+            this.service.save(customer);
+      }
 }

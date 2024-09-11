@@ -8,7 +8,7 @@ import java.sql.Date;
 import java.util.List;
 
 @Entity
-@Table(name= "crearcasos")
+@Table(name= "casos")
 @Setter
 @Getter
 @ToString

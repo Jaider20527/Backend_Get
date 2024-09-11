@@ -18,4 +18,8 @@ public class CustomerService implements ICustomerService {
         return (List<Customer>) repository.findAll();
     }
 
+    // creacion metodo POST
+    public void save(Customer customer) {
+        this.repository.save(customer);
+    }
 }
