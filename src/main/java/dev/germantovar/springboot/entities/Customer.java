@@ -20,8 +20,8 @@ public class Customer {
     private Long id;
     private String cliente;
     private String tipocaso;
-    private Date fechainicio;
-    private Date fechacierre;
+    private String fechainicio;
+    private String fechacierre;
     private String prioridad;
     private String estado;
     private String descripcioncaso;
